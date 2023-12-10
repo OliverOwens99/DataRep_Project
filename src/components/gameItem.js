@@ -33,4 +33,4 @@ function BookItem(props) {
     );
 }
 
-export default BookItem;
+export default GameItem;

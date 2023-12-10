@@ -6,4 +6,4 @@ function editGame(gameId) {
     return __filename;
 }
 
-export default editGame;
+export default EditGame;

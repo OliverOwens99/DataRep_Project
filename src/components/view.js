@@ -7,4 +7,4 @@ function view() {
 }
 
 
-export default view;
+export default View;
