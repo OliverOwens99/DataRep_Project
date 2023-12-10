@@ -1,9 +1,5 @@
-function editGame(gameId) {
-    // Logic to edit the game in the database
-    // ...
+function EditGame(gameId) {
 
-    // Export the name of the file
-    return __filename;
 }
 
 export default EditGame;

@@ -3,7 +3,12 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import WelcomeComponent from './components/index';
+import View from './components/view';
+import AddGame from './components/addgame';
+import EditGame from './components/editgame';
 function App() {
   return (
     <BrowserRouter>
