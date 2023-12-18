@@ -32,7 +32,7 @@ main().catch(err => console.log(err));
 async function main() {
     await mongoose.connect('mongodb+srv://admin:admin@cluster0.8c7ngnf.mongodb.net/?retryWrites=true&w=majority');
 
-    // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+    
 }
 //schema for Games
 const GameSchema = new mongoose.Schema({
@@ -47,14 +47,10 @@ const GameSchema = new mongoose.Schema({
 
 const gameModel = mongoose.model('games', GameSchema);
 
-//adding a book to the database with a promise
+//adding a new game to the database
 app.post('/api/games', (req, res) => {
 
-    // console.log(req.body.title);
-    // console.log(req.body.authors);
-    // console.log(req.body.cover);
-
-    //create a book object to be passed to the axios (which is a promise based http client) call to get the data from the api
+    //create a game object from the model and save it to the database
     gameModel.create({
         gameName: req.body.gameName,
         gamePrice: req.body.gamePrice,
@@ -62,15 +58,36 @@ app.post('/api/games', (req, res) => {
         gameImage: req.body.gameImage,
         gameCategory: req.body.gameCategory,
     })
-        .then(() => { res.send('Book Created') })
-        .catch(() => { res.send('Book Not Created') })
+        .then(() => { res.send('Game is created') })
+        .catch(() => { res.send('Game is Not Created') })
 
+});
+
+//finding a game by id
+app.get('/api/games/:id', async (req, res) => {
+    console.log(req.params.id);
+
+    let game = await gameModel.findById({ req.params.id });
+    res.send(game);
+});
+
+//Delete a game by id
+app.delete('/api/games/:id', async (req, res) => {
+    let game = await gameModel.findByIdAndDelete(req.params.id);
+    res.send(game);
+});
+
+//update a game by id
+app.put('/api/games/:id', async (req, res) => {
+    console.log("Update: " + req.params.id);
+
+    let game = await gameModel.findByIdAndUpdate(req.params.id, req.body, { new: true },);
+    res.send(game);
 });
 
 
 
-
-//routes
+//route /
 app.get('/', (req, res) => {    //when the user goes to localhost:5000, run this function
 
     res.send('Welcome to Wish Cart'); //send a response to the user
