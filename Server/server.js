@@ -67,7 +67,7 @@ app.post('/api/games', (req, res) => {
 app.get('/api/games/:id', async (req, res) => {
     console.log(req.params.id);
 
-    let game = await gameModel.findById({ req.params.id });
+    let game = await gameModel.findById({ _id: req.params.id });
     res.send(game);
 });
 
