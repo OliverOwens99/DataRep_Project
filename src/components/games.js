@@ -1,4 +1,4 @@
-import BookItem from "./bookItem";
+import GameItem from "./gameItem";
 
 function Games(props) {
 
