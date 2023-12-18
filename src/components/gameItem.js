@@ -11,19 +11,19 @@ function BookItem(props) {
         <Card style={{ width: '18rem' }}>
             <CardBody>
                 {/* this is to display data to the screen */}
-                {console.log(props.myBooks.title)}
-                <CardTitle> Title: {props.myBooks.title}</CardTitle>
-                <CardTitle>Authors: {props.myBooks.authors}</CardTitle>
-                <Card.Img variant="top" src={props.myBooks.cover}></Card.Img>
+                {console.log(props.myGames.title)}
+                <CardTitle> Title: {props.myGames.title}</CardTitle>
+                <CardTitle>Authors: {props.myGames.authors}</CardTitle>
+                <Card.Img variant="top" src={props.myGames.cover}></Card.Img>
             </CardBody>
             {/* edit button to edit a book from the api */}
-            <Link to={"/edit/" + props.myBooks._id} className='btn btn-primary'>Edit</Link>
+            <Link to={"/edit/" + props.myGames._id} className='btn btn-primary'>Edit</Link>
             {/* delete button to delete a book from the api */}
             <Button variant="danger" onClick={
                 (e) => {
-                    axios.delete('http://localhost:4000/api/books/' + props.myBooks._id)
+                    axios.delete('http://localhost:4000/api/books/' + props.myGames._id)
                         .then((res)=>{
-                            console.log('Book Deleted');
+                            console.log('Game deleted');
                            let reload =  props.reload();
                         })
                         .catch();
