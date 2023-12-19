@@ -9,6 +9,7 @@ import WelcomeComponent from './components/index';
 import View from './components/view';
 import AddGame from './components/addgame';
 import EditGame from './components/editgame';
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,19 +19,19 @@ function App() {
           <Navbar.Brand href="/">Wish Cart</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="view">view</Nav.Link>
-            <Nav.Link href="addgame">AddGame</Nav.Link>
+            <Nav.Link href="View">View</Nav.Link>
+            <Nav.Link href="Addgame">AddGame</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
 
-      <br />
+      <br/>
 
       
         <Routes>
           <Route path="/" element={<WelcomeComponent />} />
-          <Route path="view" element={<View></View>}></Route>
-          <Route path="addgame" element={<AddGame></AddGame>}></Route>
+          <Route path="View" element={<View></View>}></Route>
+          <Route path="Addgame" element={<AddGame></AddGame>}></Route>
           <Route path="edit/:id" element={<EditGame/>}></Route>
         </Routes>
       

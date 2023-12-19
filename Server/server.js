@@ -92,3 +92,7 @@ app.get('/', (req, res) => {    //when the user goes to localhost:5000, run this
 
     res.send('Welcome to Wish Cart'); //send a response to the user
 });
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+});

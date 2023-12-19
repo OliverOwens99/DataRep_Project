@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function addGame() {
+function AddGame() {
     // gameName: req.body.gameName,
     // gamePrice: req.body.gamePrice,
     // gameDescription: req.body.gameDescription,
@@ -57,11 +57,11 @@ function addGame() {
                     <input type="text" className="form-control" value={gameCategory} onChange={(e) => setCategory(e.target.value)} />
                 </div>
                 {/* create a button to submit the form */}
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Add Game</button>
             </form>
 
         </div>
     );
 }
 
-export default addGame;
+export default AddGame;
