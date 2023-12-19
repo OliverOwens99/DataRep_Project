@@ -19,7 +19,7 @@ function addGame() {
         e.preventDefault();
         // a log to see if the data is being passed to the console
         console.log("Game Name: " + gameName + " Game Price: " + gamePrice + " Game Description: " + gameDescription + " Game Image: " + gameImage + " Game Category: " + gameCategory);
-        // create a book object to be passed to the axios (which is a promise based http client) call to get the data from the api
+        // create a game object to be passed to the axios (which is a promise based http client) call to get the data from the api
         const game= {gameName:gameName, gamePrice:gamePrice, gameDescription:gameDescription, gameImage:gameImage, gameCategory:gameCategory};
         axios.post('http://localhost:5000/api/games', game)
         .then()
