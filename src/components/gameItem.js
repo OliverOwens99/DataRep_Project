@@ -5,11 +5,11 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 // function to represent a single book item
 
-    // gameName: req.body.gameName,
-    // gamePrice: req.body.gamePrice,
-    // gameDescription: req.body.gameDescription,
-    // gameImage: req.body.gameImage,
-    // gameCategory: req.body.gameCategory,
+// gameName: req.body.gameName,
+// gamePrice: req.body.gamePrice,
+// gameDescription: req.body.gameDescription,
+// gameImage: req.body.gameImage,
+// gameCategory: req.body.gameCategory,
 
 function GameItem(props) {
 
@@ -22,7 +22,7 @@ function GameItem(props) {
                 <CardTitle> Title: {props.myGames.gameName}</CardTitle>
                 <CardTitle>Price: {props.myGames.gamePrice}</CardTitle>
                 <CardTitle>Description: {props.myGames.gameDescription}</CardTitle>
-                <Card.Img variant="top" src={props.myGames.game}></Card.Img>
+                <CardImg variant="top" src={props.myGames.game}></CardImg>
                 <CardTitle>Category: {props.myGames.gameCategory}</CardTitle>
             </CardBody>
             {/* edit button to edit a game from the api */}
@@ -31,9 +31,9 @@ function GameItem(props) {
             <Button variant="danger" onClick={
                 (e) => {
                     axios.delete('http://localhost:5000/api/games/' + props.myGames._id)
-                        .then((res)=>{
+                        .then((res) => {
                             console.log('Game deleted');
-                           let reload =  props.reload();
+                            let reload = props.reload();
                         })
                         .catch();
                 }

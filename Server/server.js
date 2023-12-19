@@ -21,7 +21,11 @@ app.use(function (req, res, next) {
     next();
 });
 
-
+// get the data from the api and call find to get the data from the database
+app.get ('/api/games',async(req, res) => {
+    let games= await gameModel.find({});
+    res.json(games);
+});
 // Mongoose
 
 //connecting to the database
@@ -92,6 +96,8 @@ app.get('/', (req, res) => {    //when the user goes to localhost:5000, run this
 
     res.send('Welcome to Wish Cart'); //send a response to the user
 });
+
+
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

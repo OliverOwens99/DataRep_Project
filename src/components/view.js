@@ -31,9 +31,9 @@ function View() {
         };
 
     return (
-        // Read compoentent that dislays to the main react app when called in app.js and also relaods the data when changes occur
+        // Read component that displays to the main react app when called in app.js and also reloads the data when changes occur
         <div>
-            <h2>Hello from view  compoent </h2>
+            <h2>Hello from View  component </h2>
             <Games myGames={data} reload={ReloadData}></Games>
         </div>
     );
