@@ -22,7 +22,7 @@ export default function Edit(props) {
         //axios is a promised based web client
         //make a HTTP Request with GET method and pass as part of the
         //url.
-        axios.get('http://localhost:4000/api/games/' + id)
+        axios.get('http://localhost:5000/api/games/' + id)
             .then((response) => {// Assign Response data to the arrays using useState.
                 setName(response.data.gameName);
                 setPrice(response.data.gamePrice);

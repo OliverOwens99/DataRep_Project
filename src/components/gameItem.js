@@ -15,7 +15,7 @@ function GameItem(props) {
 
     return (
         // create a card to display the data to the screen
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '55rem' }}>
             <CardBody>
                 {/* this is to display data to the screen */}
                 {console.log(props.myGames.gameName)}
