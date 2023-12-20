@@ -58,6 +58,7 @@ function AddGame() {
                 </div>
                 {/* create a button to submit the form */}
                 <button type="submit" className="btn btn-primary">Add Game</button>
+                
             </form>
 
         </div>

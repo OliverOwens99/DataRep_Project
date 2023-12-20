@@ -22,7 +22,7 @@ function GameItem(props) {
                 <CardTitle> Title: {props.myGames.gameName}</CardTitle>
                 <CardTitle>Price: {props.myGames.gamePrice}</CardTitle>
                 <CardTitle>Description: {props.myGames.gameDescription}</CardTitle>
-                <CardImg variant="top" src={props.myGames.game}></CardImg>
+                <Card.Img variant="top" src={props.myGames.gameImage}></Card.Img>
                 <CardTitle>Category: {props.myGames.gameCategory}</CardTitle>
             </CardBody>
             {/* edit button to edit a game from the api */}

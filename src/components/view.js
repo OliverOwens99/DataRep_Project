@@ -1,4 +1,4 @@
-// Purpose: To display the books that are read using the usestate hook and axios to get the data from the api
+// Purpose: To display the games that are read using the usestate hook and axios to get the data from the api
 import { useEffect, useState } from "react";
 import Games from "./games";
 import axios from "axios";
@@ -18,7 +18,7 @@ function View() {
                 .catch((error) => console.log(error))
         }, []);
 
-        //to relaod read when changes occur
+        //to reload read when changes occur
         const ReloadData = (e) => {
             console.log("Data Reloaded");
             axios.get('http://localhost:5000/api/games')
@@ -31,9 +31,9 @@ function View() {
         };
 
     return (
-        // Read component that displays to the main react app when called in app.js and also reloads the data when changes occur
+        // View component that displays to the main react app when called in app.js and also reloads the data when changes occur
         <div>
-            <h2>Hello from View  component </h2>
+            <h2>Viewing Games On Your Wishlist</h2>
             <Games myGames={data} reload={ReloadData}></Games>
         </div>
     );
