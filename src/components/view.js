@@ -32,10 +32,16 @@ function View() {
 
     return (
         // View component that displays to the main react app when called in app.js and also reloads the data when changes occur
-        <div>
-            <h2>Viewing Games On Your Wishlist</h2>
+    <div>
+        <h2>Viewing Games On Your Wishlist</h2>
+        <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(2, 1fr)', 
+            gap: '10px' 
+        }}>
             <Games myGames={data} reload={ReloadData}></Games>
         </div>
+    </div>
     );
 }
 export default View;
