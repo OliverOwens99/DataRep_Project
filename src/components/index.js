@@ -7,7 +7,7 @@ const WelcomeComponent = () => {
 
 
     const [games, setGames] = useState([]); // Create a games array
-
+    // Fetch the first three games from the database
     useEffect(() => {
         axios.get('http://localhost:5000/api/games')
             .then((response) => {
@@ -17,7 +17,7 @@ const WelcomeComponent = () => {
                 console.error("Error fetching data: ", error);
             })
     }, []);
-
+    // Reload the games array when changes occur
     const reloadGames = () => {
         axios.get('http://localhost:5000/api/games')
             .then((response) => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { useNavigate } from "react-router-dom";
 function AddGame() {
 
 
@@ -10,7 +10,7 @@ function AddGame() {
     const [gameDescription, setDescription] = useState('');
     const [gameImage, setImage] = useState('');
     const [gameCategory, setCategory] = useState('');
-    
+    const navigate = useNavigate();
     // handles when the form is submitted with arrow function and log it to the console
     const handleSubmit = (e) => {
         e.preventDefault();
