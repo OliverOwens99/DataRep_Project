@@ -15,10 +15,10 @@ function GameItem(props) {
             <CardBody>
                 {/* this is to display data to the screen */}
                 {console.log(props.myGames.gameName)}
-                <CardTitle> Title: {props.myGames.gameName}</CardTitle>
-                <CardTitle>Price: {props.myGames.gamePrice}</CardTitle>
-                <CardTitle>Description: {props.myGames.gameDescription}</CardTitle>
                 <Card.Img variant="top" src={props.myGames.gameImage} style={{ height: '75%' }}></Card.Img>
+                <CardTitle> Title: {props.myGames.gameName}</CardTitle>
+                <CardTitle>Price: €{props.myGames.gamePrice}</CardTitle>
+                <CardTitle>Description: {props.myGames.gameDescription}</CardTitle>
                 <CardTitle>Category: {props.myGames.gameCategory}</CardTitle>
             </CardBody>
             {/* edit button to edit a game from the api */}
