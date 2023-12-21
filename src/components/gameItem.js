@@ -3,13 +3,9 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-// function to represent a single book item
+// function to represent a single game item
 
-// gameName: req.body.gameName,
-// gamePrice: req.body.gamePrice,
-// gameDescription: req.body.gameDescription,
-// gameImage: req.body.gameImage,
-// gameCategory: req.body.gameCategory,
+
 
 function GameItem(props) {
 

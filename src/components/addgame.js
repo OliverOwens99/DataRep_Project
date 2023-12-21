@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function AddGame() {
-    // gameName: req.body.gameName,
-    // gamePrice: req.body.gamePrice,
-    // gameDescription: req.body.gameDescription,
-    // gameImage: req.body.gameImage,
-    // gameCategory: req.body.gameCategory,
+
 
     // import the useState hook from react
     const [gameName, setName] = useState('');
@@ -14,6 +10,7 @@ function AddGame() {
     const [gameDescription, setDescription] = useState('');
     const [gameImage, setImage] = useState('');
     const [gameCategory, setCategory] = useState('');
+    
     // handles when the form is submitted with arrow function and log it to the console
     const handleSubmit = (e) => {
         e.preventDefault();

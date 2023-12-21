@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import Games from './games'; // Assuming Games is in the same directory
+import Games from './games'; // Import the Games component
 const WelcomeComponent = () => {
 
 
-    const [games, setGames] = useState([]);// Replace with actual games from the database
+    const [games, setGames] = useState([]); // Create a games array
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/games')

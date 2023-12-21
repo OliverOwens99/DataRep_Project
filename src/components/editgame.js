@@ -50,6 +50,7 @@ export default function Edit(props) {
                 navigate('/read');
             });
     }
+    // creates a form to edit a game from the database
     return (
         <div>
             <form onSubmit={handleSubmit}>
