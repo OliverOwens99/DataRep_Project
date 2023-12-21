@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <Navbar bg="danger" data-bs-theme="dark">
+      <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="/">Wish Cart</Navbar.Brand>
           <Nav className="me-auto">
