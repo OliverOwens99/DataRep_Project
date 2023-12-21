@@ -45,9 +45,9 @@ export default function Edit(props) {
             gameCategory: gameCategory
         };
         axios.put('http://localhost:5000/api/games/' + id, newGame)
-            .then((res) => {
-                console.log(res.data);
-                navigate('/read');
+        .then((res) => {
+            console.log(res.data);
+            navigate('/view');
             });
     }
     // creates a form to edit a game from the database

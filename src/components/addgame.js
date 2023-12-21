@@ -19,7 +19,10 @@ function AddGame() {
         // create a game object to be passed to the axios (which is a promise based http client) call to get the data from the api
         const game= {gameName:gameName, gamePrice:gamePrice, gameDescription:gameDescription, gameImage:gameImage, gameCategory:gameCategory};
         axios.post('http://localhost:5000/api/games', game)
-        .then()
+        .then((res) => {
+            console.log(res.data);
+            navigate('/view');
+        })
         .catch();
     };
     return (
