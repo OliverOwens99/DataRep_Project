@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: white; /* Added */
 }
 
 .App-logo {
@@ -27,6 +28,16 @@
 .App-link {
   color: #61dafb;
 }
+
+body {
+  background-image: url(https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg);
+  image-rendering: smooth;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
 
 @keyframes App-logo-spin {
   from {
